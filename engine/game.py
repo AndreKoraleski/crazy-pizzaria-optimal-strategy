@@ -181,10 +181,21 @@ class GameState:
         for _ in range(amount):
             if not opponents:
                 break
+            
+            needed = self._needed_ingredients(thief)
+            if not needed:
+                break 
+
             victim = controller.choose_opponent(thief, opponents)
             if not victim or not victim.ingredients:
                 continue
-            stolen = controller.choose_ingredient(victim.ingredients, thief)
+            
+            can_steal = needed.intersection(victim.ingredients)
+
+            if not can_steal:
+                continue
+
+            stolen = controller.choose_ingredient(can_steal, thief)
             if stolen in victim.ingredients:
                 victim.ingredients.remove(stolen)
                 thief.ingredients.add(stolen)
