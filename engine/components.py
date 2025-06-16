@@ -1,5 +1,5 @@
 from enum import Enum, auto         # To avoid that future changes in values break other systems
-from dataclasses import dataclass   # For using Frozen=True so the Pizza Cards are imutable
+from dataclasses import dataclass   # For using Frozen=True so the dataclasses are imutable
 from typing import List, Optional   # Just for type checking
 
 # =====================
