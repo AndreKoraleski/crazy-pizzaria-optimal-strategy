@@ -34,7 +34,7 @@ Welcome to **Crazy Pizzaria**, a computational framework for simulating, analyzi
 
 1. **Clone the repository:**
     ```sh
-    git clone https://github.com/yourname/crazy-pizzaria.git
+    git clone https://github.com/AndreKoraleski/crazy-pizzaria-optimal-strategy.git
     cd crazy-pizzaria
     ```
 
