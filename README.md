@@ -23,6 +23,7 @@ Welcome to **Crazy Pizzaria**, a computational framework for simulating, analyzi
 | `env/`        | PettingZoo-compatible MARL environment |
 | `agents/`     | Reinforcement learning agents and training scripts |
 | `gui/`        | Optional GUI (Pygame or Tkinter) for visualization |
+| `scripts/`    | One-off runnable Python scripts for testing, demos, and diagnostics |
 | `data/`       | Simulation outputs, logs, and trained models |
 | `strategy/`   | Extracted strategic insights (e.g., decision trees, policy files) |
 | `notebooks/`  | Jupyter notebooks for analysis and experimentation |
