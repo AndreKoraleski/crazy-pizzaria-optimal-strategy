@@ -6,3 +6,5 @@ pettingzoo
 gymnasium
 torch
 pygame
+pytest
+setuptools

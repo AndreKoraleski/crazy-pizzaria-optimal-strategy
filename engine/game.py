@@ -100,6 +100,16 @@ class GameState:
 
         self.current_player_index = (self.current_player_index + 1) % len(self.players)
 
+    def _check_for_winner(self):
+        """
+        Checks if any player has completed all their recipes and updates the
+        game state if a winner is found. The game ends immediately.
+        """
+        player = self.players[self.current_player_index]
+        if player.has_completed_all_recipes():
+            self.game_over = True
+            self.winner_id = player.id
+
     # === Luck Deck Methods ===
     
     def _build_luck_deck(self) -> List[LuckCard]:
