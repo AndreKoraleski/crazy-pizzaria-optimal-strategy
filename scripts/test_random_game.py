@@ -1,9 +1,7 @@
-from ..engine.components import PizzaCard, ALL_PIZZAS
-from ..engine.game import GameState
-from ..engine.policies.random_policy import RandomPolicy
-from ..engine.policy import PlayerController
-
-# FIXME: ImportError: attempted relative import with no known parent package
+from engine.components import PizzaCard, ALL_PIZZAS
+from engine.game import GameState
+from engine.policies.random_policy import RandomPolicy
+from engine.policy import PlayerController
 
 def get_default_recipe_draft(num_players: int) -> list[list[PizzaCard]]:
     """
