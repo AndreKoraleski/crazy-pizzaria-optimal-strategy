@@ -58,6 +58,16 @@ Welcome to **Crazy Pizzaria**, a computational framework for simulating, analyzi
 
 ---
 
+## 🧪 Running Tests
+
+This project uses `pytest` to validate the core logic of the simulation engine. Tests cover game initialization, turn flow, space resolution, and luck card effects.
+
+To run the full test suite, execute the following command in the root directory:
+```sh
+pytest
+```
+---
+
 ## 📜 Game Rules: *Crazy Pizzaria – The Complete Rulebook*
 
 ### 1. Objective
