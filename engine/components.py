@@ -135,7 +135,7 @@ class LuckCardType(Enum):   # The effects of the cards are almost self-explanato
     GAIN_1 = auto()
     GAIN_2 = auto()
     STEAL_1 = auto()        
-    STEAL_2 = auto()        # You choose either: a) Two players, then steal an Ingredient from each; b) Steal two cards from a player
+    STEAL_2 = auto()        # You either choose: a) Two players, then steal an Ingredient from each; b) One player to steal two cards
     LOSE_1 = auto()
     LOSE_2 = auto()
     LOSE_ALL = auto()
