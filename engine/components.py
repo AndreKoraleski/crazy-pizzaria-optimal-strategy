@@ -31,8 +31,8 @@ class PizzaCard:
 
 # --- Pizza Card Definitions ---
 
-CALABRESA = PizzaCard(
-    "Calabresa",
+PEPPERONI = PizzaCard(
+    "Pepperoni",
     [Ingredient.SALAMI, Ingredient.BROCCOLI, Ingredient.EGGS, Ingredient.OLIVES, Ingredient.PEAS]
 )
 
@@ -41,13 +41,13 @@ PORTUGUESE = PizzaCard(
     [Ingredient.CORN, Ingredient.HAM, Ingredient.CHEESE, Ingredient.OLIVES, Ingredient.EGGS]
 )
 
-TOSCANE = PizzaCard(
-    "Toscane",
+TUSCAN = PizzaCard(
+    "Tuscan",
     [Ingredient.SALAMI, Ingredient.HAM, Ingredient.TOMATO, Ingredient.OLIVES, Ingredient.ONION]
 )
 
-MARGUERITA = PizzaCard(
-    "Marguerita",
+MARGHERITA = PizzaCard(
+    "Margherita",
     [Ingredient.CHEESE, Ingredient.TOMATO, Ingredient.SALAMI, Ingredient.CORN, Ingredient.BROCCOLI]
 )
 
@@ -63,7 +63,7 @@ VEGETARIAN = PizzaCard(
 
 # --- List of all Pizza Cards ---
 
-ALL_PIZZAS = [CALABRESA, PORTUGUESE, TOSCANE, MARGUERITA, ROMAN, VEGETARIAN]
+ALL_PIZZAS = [PEPPERONI, PORTUGUESE, TUSCAN, MARGHERITA, ROMAN, VEGETARIAN]
 
 # =====================
 #  Board Space Types
