@@ -60,7 +60,7 @@ class GameState:
         roll = random.randint(1, 6)
         self.pawn_position = (self.pawn_position + roll - 1) % 35 + 1
 
-        space = self.board[self.pawn_position]
+        space = self.board[self.pawn_position - 1]
         self._resolve_space(space, player)
 
         self._advance_turn()
