@@ -126,3 +126,39 @@ BOARD_LAYOUT = [
     BoardSpace(34, BoardSpaceType.INGREDIENT, Ingredient.ONION),
     BoardSpace(35, BoardSpaceType.INGREDIENT, Ingredient.EGGS),
 ]
+
+# =====================
+#  Luck Card Type
+# =====================
+
+class LuckCardType(Enum):   # The effects of the cards are almost self-explanatory
+    GAIN_1 = auto()
+    GAIN_2 = auto()
+    STEAL_1 = auto()        
+    STEAL_2 = auto()        # You choose either: a) Two players, then steal an Ingredient from each; b) Steal two cards from a player
+    LOSE_1 = auto()
+    LOSE_2 = auto()
+    LOSE_ALL = auto()
+
+# =====================
+#  Luck Card
+# =====================
+
+# --- Class ---
+
+@dataclass(frozen=True)
+class LuckCard:
+    card_type: LuckCardType
+    count: int
+
+# --- Deck Definition ---
+
+LUCK_DECK_COMPOSITION = [               # Total of 24 cards (13 of Good Luck, 11 of Bad Luck)
+    LuckCard(LuckCardType.GAIN_1, 7),   
+    LuckCard(LuckCardType.GAIN_2, 2),   
+    LuckCard(LuckCardType.STEAL_1, 3),  
+    LuckCard(LuckCardType.STEAL_2, 1),  
+    LuckCard(LuckCardType.LOSE_1, 8),   
+    LuckCard(LuckCardType.LOSE_2, 2),   
+    LuckCard(LuckCardType.LOSE_ALL, 1), 
+]
