@@ -49,6 +49,8 @@ Welcome to **Crazy Pizzaria**, a computational framework for simulating, analyzi
 3.  **Run a test simulation:**
     After installation, you can run a sample game using the convenient command-line script:
     ```sh
+    # Run with --n 2, 3 or 6 (default 3) 
+    # for different player combinations
     run-random-pizzaria-game
     ```
     Alternatively, you can always execute the script directly:

@@ -1,3 +1,4 @@
+import argparse
 from engine.components import PizzaCard, ALL_PIZZAS
 from engine.game import GameState
 from engine.policies.random_policy import RandomPolicy
@@ -22,7 +23,13 @@ def get_default_recipe_draft(num_players: int) -> list[list[PizzaCard]]:
         raise ValueError("Only 2, 3, or 6 players are supported.")
 
 def main():
-    num_players = 3
+    parser = argparse.ArgumentParser(description="Run a random game of Crazy Pizzaria.")
+    parser.add_argument("--num-players", type=int, default=3, choices=[2, 3, 6],
+                        dest="num_players",
+                        help="Number of players in the game. Must be 2, 3, or 6.")
+    args = parser.parse_args()
+    num_players = args.num_players
+
     recipe_draft = get_default_recipe_draft(num_players)
     controllers: list[PlayerController] = [RandomPolicy() for _ in range(num_players)]
 
