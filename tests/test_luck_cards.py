@@ -19,13 +19,19 @@ def test_resolve_luck_card_steal_1(game_state: GameState):
 
     thief = game_state.players[0]
     victim = game_state.players[1]
-    victim.ingredients.add(Ingredient.TOMATO)
+
+    needed_ingredients = game_state._needed_ingredients(thief)
+    if not needed_ingredients:
+        pytest.skip("Thief needs no ingredients to steal.")
     
+    ingredient_to_steal = list(needed_ingredients)[0]
+    victim.ingredients.add(ingredient_to_steal)
+
     card = LuckCard(LuckCardType.STEAL_1, 1)
     game_state._resolve_luck_card(card, thief)
 
-    assert Ingredient.TOMATO in thief.ingredients
-    assert Ingredient.TOMATO not in victim.ingredients
+    assert ingredient_to_steal in thief.ingredients
+    assert ingredient_to_steal not in victim.ingredients
 
 def test_resolve_luck_card_lose_1(game_state: GameState):
     """Tests the LOSE_1 luck card."""
